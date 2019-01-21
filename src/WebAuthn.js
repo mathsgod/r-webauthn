@@ -1,4 +1,7 @@
-class WebAuthn {
+export default class WebAuthn {
+    constructor() {
+
+    }
 
     register(key) {
         key = JSON.parse(key);
