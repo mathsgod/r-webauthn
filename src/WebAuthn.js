@@ -6,6 +6,11 @@ export default class WebAuthn {
     register(key) {
         key = JSON.parse(key);
         var p = new Promise((resolve, reject) => {
+            if (!('credentials' in navigator)) {
+                reject("You broswer does not support webauthentication.");
+                return;
+            }
+
             key.publicKey.challenge = new Uint8Array(key.publicKey.challenge); // convert type for use by key
             key.publicKey.user.id = new Uint8Array(key.publicKey.user.id);
 
