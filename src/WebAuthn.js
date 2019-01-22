@@ -71,6 +71,12 @@ export default class WebAuthn {
         var pk = JSON.parse(key);
         var p = new Promise((resolve, reject) => {
 
+            if (!('credentials' in navigator)) {
+                reject("You broswer does not support webauthentication.");
+                return;
+            }
+
+
             var originalChallenge = pk.challenge;
             pk.challenge = new Uint8Array(pk.challenge);
             pk.allowCredentials.forEach(function (k, idx) {
