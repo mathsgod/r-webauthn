@@ -7,7 +7,9 @@ export default class WebAuthn {
         key = JSON.parse(key);
         var p = new Promise((resolve, reject) => {
             if (!('credentials' in navigator)) {
-                reject("You broswer does not support webauthentication.");
+                reject({
+                    message: "You broswer does not support webauthentication."
+                });
                 return;
             }
 
@@ -72,7 +74,9 @@ export default class WebAuthn {
         var p = new Promise((resolve, reject) => {
 
             if (!('credentials' in navigator)) {
-                reject("You broswer does not support webauthentication.");
+                reject({
+                    message: "You broswer does not support webauthentication."
+                });
                 return;
             }
 
