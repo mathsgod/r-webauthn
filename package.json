@@ -1,0 +1,22 @@
+{
+  "name": "r-webauthn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathsgod/r-webauthn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathsgod/r-webauthn/issues"
+  },
+  "homepage": "https://github.com/mathsgod/r-webauthn#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0"
+  }
+}
