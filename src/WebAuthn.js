@@ -1,5 +1,4 @@
-import "@babel/polyfill";
-export default class WebAuthn {
+var WebAuthn = class WebAuthn {
     constructor() {
 
     }
@@ -128,5 +127,6 @@ export default class WebAuthn {
         return p;
 
     }
+};
 
-}
+export { WebAuthn as WebAuthn };

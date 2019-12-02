@@ -7,6 +7,9 @@ module.exports = {
         library: "WebAuthn",
         libraryTarget: "window"
     },
+    devServer: {
+        contentBase: './dist'
+    },
     module: {
         rules: [
             {
@@ -20,5 +23,6 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    watch: true
 };
